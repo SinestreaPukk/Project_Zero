@@ -1,27 +1,18 @@
-h1 {
-    color:red;
-}
-
-.Image{
-    position: relative;
-    left: 20px;
-    top: 12px
-}
-
-
-.intro_title{
-    font-family: 'Arial';font-size: 22px;
-}
-
+/* Reset default styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Oswald', sans-serif;
-}
-
-.navbar{
-    background-color: #ad1b1bfb;
+  }
+  
+  body {
+    font-family: 'Brandon Text', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    font-weight: 700;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #78b5eafb;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -30,58 +21,56 @@ h1 {
     position: sticky;
     top: 0;
     z-index: 999;
-}
-
-.navbar__container{
+  }
+  
+  .navbar__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 80px;
-    z-index: 1;
     width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
-}
+    max-width: 1500px;
 
-#navbar__logo{
-    background-color: #f6f3ed;
-    background-size: 100%;
+
+  }
+  
+  #navbar__logo {
+    background: linear-gradient(90deg, #f6f3ed, #bee6e5);
+    background-clip: text;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    color: transparent;
     display: flex;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2.5rem;font-weight: bold;
-    position: relative;
-    right: 103px;
-    top:-1px;
-}
+    font-size: 2.3rem;
+    font-weight: 900;
+    margin-right: auto;
+  }
+  
+ 
+  
 
-#navbar__logo:hover{
+  
+  #navbar__logo:hover {
     background-color: #f6f3ed;
     text-decoration-thickness: 10%;
-
-}
-
-.fa_gem {
-    margin-right: 0.5rem;
-}
-
-.navbar__menu {
+  }
+  
+  .navbar__menu {
+    color: #000000;
     display: flex;
     align-items: center;
     list-style: none;
     text-align: center;
-}
-
-.navbar__IGCSE {
+    
+  }
+  
+  .navbar__item {
     height: 80px;
-}
-
-.navbar__links {
+  }
+  
+  .navbar__links {
     color: #f6f3ed;
     display: flex;
     align-items: center;
@@ -89,40 +78,100 @@ h1 {
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
-}
-
-.navbar__links:hover {
+  }
+  
+  .navbar__links:hover {
     color: #e3b8b8;
     transition: all 0.2s ease;
-}
-
-.navbar__btn{
+  }
+  
+  .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 1rem;
-    width: 100%;
-}
-
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: right;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     height: 100%;
-    width: 100%;
     border: none;
     outline: none;
     border-radius: 7px;
     background: #c14b4bfb;
     color: #f6f3ed;
-    position: relative;
-    left: 10px;
-}
-
-.button:hover{
-    background:#a04141fb;
+    font-weight: bold;
+  }
+  
+  .button:hover {
+    background: #a04141fb;
     color: #e0ddd8;
     transition: all 0.3s ease;
-}
+  }
+  
+  /* Mobile Menu Styles */
+  #moblie-menu {
+    display: none;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .navbar__menu {
+      display: none;
+    }
+  
+    #moblie-menu {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+  
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #78b5eafb;
+      margin: 5px;
+    }
+  
+    .navbar__menu {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 0;
+      width: 100%;
+      position: absolute; 
+      transition: all 0.5s ease;
+      height: 50vh;
+      z-index: -1;
+      background: #78b5eafb;
+    }
+
+    .navbar__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 3px auto;
+        transition: all o.3 ease-in-out;
+        background: #e3b8b8;
+    }
+
+    .navbar__menu.active {
+    background-color:#000000 ;
+    top: 0%;
+    opacity: 1;
+    transition: all 0.5 ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.6rem;
+
+      }
+  
+    .navbar__item {
+      margin-bottom: 10px;
+      height: auto;
+    }
+ 
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+
+
+  }
+  
