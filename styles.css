@@ -29,7 +29,7 @@
     align-items: center;
     height: 80px;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1600px;
 
 
   }
@@ -45,10 +45,8 @@
     text-decoration: none;
     font-size: 2.3rem;
     font-weight: 900;
-    margin-right: auto;
+
   }
-  
- 
   
 
   
@@ -63,6 +61,7 @@
     align-items: center;
     list-style: none;
     text-align: center;
+    padding-right: 25px;
     
   }
   
@@ -110,6 +109,10 @@
   #moblie-menu {
     display: none;
   }
+
+  #navbar__logo{
+    padding-left: 25px;
+}
   
   @media screen and (max-width: 960px) {
     .navbar__menu {
@@ -130,6 +133,10 @@
       margin: 5px;
     }
   
+    #navbar__logo{
+        padding-left: 25px;
+    }
+
     .navbar__menu {
       display: grid;
       grid-template-columns: auto;
