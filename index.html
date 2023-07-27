@@ -1,60 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-
-        <meta charset="UTF-8" />
-        <meta name="viewpoint"
-        content="width=device-width,
-        initial-scale=1.0" />
-
-        <link rel="stylesheet" href="styles.css" />
-
-    <title> Regent's BKK Press </title> 
-
-    </head>
-
-
-<body>
-    <nav class="navbar">
-
-<a href="/"><img src="New logo.png" alt="HTML5 Icon" class="Image"width="90" height="90"></a>
-        <div class="navbar__container">
-                <a href="/" id="navbar__logo">Regents IGCSE guides </a>
-            <div class="navbar__toggle" id="moblie-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__IGCSE">
-                    <a href="introduction.html" class="navbar__links">Introduction</a>
-                </li>
-
-                <li class="navbar__IGCSE">
-                    <a href="AboutU.html" class="navbar__links">About Us</a>
-                </li>
-
-                <li class="navbar__IGCSE">
-                    <a href="Contact.html" class="navbar__links">Contact</a>
-                </li>
-
-                <li class="navbar__IGCSE">
-                    <a href="https://regentsportal.engagehosted.com/vle/" class="navbar__links">Engage Portal</a>
-                </li>
-                
-                <li class="navbar__IGCSE">
-                    <a href="https://sites.google.com/regents.ac.th/parents/home?authuser=0" class="navbar__links">School Websites</a>
-                </li>
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Brandon Text', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    font-weight: 700;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #78b5eafb;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    max-width: 1500px;
 
 
-                
-                <li class="navbar__btnIGCSE">
-                    <a href="/" class="button">Start</a>
-                </li>
+  }
+  
+  #navbar__logo {
+    background: linear-gradient(90deg, #f6f3ed, #bee6e5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2.3rem;
+    font-weight: 900;
+    margin-right: auto;
+  }
+  
+ 
+  
 
-            </ul>
-        </div>
-    </nav>
-</body>
+  
+  #navbar__logo:hover {
+    background-color: #f6f3ed;
+    text-decoration-thickness: 10%;
+  }
+  
+  .navbar__menu {
+    color: #000000;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    
+  }
+  
+  .navbar__item {
+    height: 80px;
+  }
+  
+  .navbar__links {
+    color: #f6f3ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+  }
+  
+  .navbar__links:hover {
+    color: #e3b8b8;
+    transition: all 0.2s ease;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 15px;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background: #c14b4bfb;
+    color: #f6f3ed;
+    font-weight: bold;
+  }
+  
+  .button:hover {
+    background: #a04141fb;
+    color: #e0ddd8;
+    transition: all 0.3s ease;
+  }
+  
+  /* Mobile Menu Styles */
+  #moblie-menu {
+    display: none;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .navbar__menu {
+      display: none;
+    }
+  
+    #moblie-menu {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+  
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #78b5eafb;
+      margin: 5px;
+    }
+  
+    .navbar__menu {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 0;
+      width: 100%;
+      position: absolute; 
+      transition: all 0.5s ease;
+      height: 50vh;
+      z-index: -1;
+      background: #78b5eafb;
+    }
 
-</html>
+    .navbar__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 3px auto;
+        transition: all o.3 ease-in-out;
+        background: #e3b8b8;
+    }
+
+    .navbar__menu.active {
+    background-color:#000000 ;
+    top: 0%;
+    opacity: 1;
+    transition: all 0.5 ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.6rem;
+
+      }
+  
+    .navbar__item {
+      margin-bottom: 10px;
+      height: auto;
+    }
+ 
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+
+
+  }
+  
