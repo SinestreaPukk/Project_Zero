@@ -1,184 +1,210 @@
-/* Reset default styles */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Brandon Text', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-weight: 700;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #78b5eafb;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  max-width: 1500px; /* Margin Navbar */
+
+
+}
+
+#navbar__logo {
+  background: linear-gradient(90deg, #f6f3ed, #bee6e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2.3rem;
+  font-weight: 900;
+}
+
+
+
+#navbar__logo:hover {
+  background-color: #f6f3ed;
+  text-decoration-thickness: 10%;
+}
+
+.navbar__menu {
+  color: #78b5eafb;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+
   
-  body {
-    font-family: 'Brandon Text', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
-    font-weight: 700;
-  }
-  
-  /* Navbar styles */
-  .navbar {
-    background-color: #78b5eafb;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-  
+}
+
+.navbar__item {
+  height: 80px;
+}
+
+.navbar__links {
+  color: #f6f3ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.navbar__links:hover {
+  color: #476ea0fb;
+  transition: all 0.2s ease;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #5a9de8;
+  color: #fff;
+}
+
+.button:hover {
+  background: #2e64a2;
+  transition: all 0.3s ease;
+  color: #888888;
+}
+
+/* Mobile Menu Styles */
+#moblie-menu {
+  display: none;
+}
+
+#navbar__logo{
+  padding-left: 25px;
+}
+@media screen and (max-width: 960px) {
   .navbar__container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     height: 80px;
+    z-index: 1;
     width: 100%;
-    max-width: 1600px;
-
-
+    max-width: 1300px;
+    padding: 0;
   }
-  
-  #navbar__logo {
-    background: linear-gradient(90deg, #f6f3ed, #bee6e5);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2.3rem;
-    font-weight: 900;
 
-  }
-  
-
-  
-  #navbar__logo:hover {
-    background-color: #f6f3ed;
-    text-decoration-thickness: 10%;
-  }
-  
   .navbar__menu {
-    color: #000000;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    text-align: center;
-    padding-right: 25px;
-    
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    height: 50vh;
+    z-index: -1;
   }
-  
+
+  .navbar__menu.active {
+    background: #78b5eafb;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.6rem;
+  }
+
+  #navbar__logo {
+    padding-left: 25px;
+  }
+
+  .navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+  }
+
   .navbar__item {
-    height: 80px;
+    width: 100%;
   }
-  
+
   .navbar__links {
-    color: #f6f3ed;
+    /* ... Other existing styles ... */
+    padding: 1rem; /* Decrease padding for better spacing */
+    width: 100%;
+  }
+
+
+  .navbar__btn {
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
+    align-items: center;
   }
-  
-  .navbar__links:hover {
-    color: #e3b8b8;
-    transition: all 0.2s ease;
-  }
-  
+
   .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    padding: 10px 15px;
-    height: 100%;
-    border: none;
-    outline: none;
-    border-radius: 7px;
-    background: #c14b4bfb;
-    color: #f6f3ed;
-    font-weight: bold;
-  }
-  
-  .button:hover {
-    background: #a04141fb;
-    color: #e0ddd8;
-    transition: all 0.3s ease;
-  }
-  
-  /* Mobile Menu Styles */
-  #moblie-menu {
-    display: none;
+    width: 80%;
+    height: 80px;
+    margin: 0;
   }
 
-  #navbar__logo{
-    padding-left: 25px;
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  .navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
-  
-  @media screen and (max-width: 960px) {
-    .navbar__menu {
-      display: none;
-    }
-  
-    #moblie-menu {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      margin-right: 20px;
-    }
-  
-    .bar {
-      width: 25px;
-      height: 3px;
-      background-color: #78b5eafb;
-      margin: 5px;
-    }
-  
-    #navbar__logo{
-        padding-left: 25px;
-    }
-
-    .navbar__menu {
-      display: grid;
-      grid-template-columns: auto;
-      margin: 0;
-      width: 100%;
-      position: absolute; 
-      transition: all 0.5s ease;
-      height: 50vh;
-      z-index: -1;
-      background: #78b5eafb;
-    }
-
-    .navbar__toggle .bar{
-        width: 25px;
-        height: 3px;
-        margin: 3px auto;
-        transition: all o.3 ease-in-out;
-        background: #e3b8b8;
-    }
-
-    .navbar__menu.active {
-    background-color:#000000 ;
-    top: 0%;
-    opacity: 1;
-    transition: all 0.5 ease;
-    z-index: 99;
-    height: 50vh;
-    font-size: 1.6rem;
-
-      }
-  
-    .navbar__item {
-      margin-bottom: 10px;
-      height: auto;
-    }
- 
-    .navbar__toggle .bar{
-        display: block;
-        cursor: pointer;
-    }
-
-
-
-  }
-  
