@@ -10,6 +10,10 @@
 
     <title> Project Zero </title> 
 
+
+
+
+
     </head>
 
 <body>
@@ -21,7 +25,7 @@
         <div class="navbar__container">
 
 
-            <a href="/" id="navbar__logo"> Project Z</a>
+            <a href="index.php" id="navbar__logo"> Project Z</a>
             
             <div class="navbar__toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -49,18 +53,16 @@
                 </li>
                 
                 <li class="navbar__btn">
-                    <a href="signup.html" class="button">SignUp</a>
+                    <a href="register_form.php" class="button">SignUp</a>
                 </li>
 
-                
-
+         
             </ul>
         </div>
     </nav>
 
     <!-- Main Section-->
 
-        <!-- TextArea -->
     <div class="main">
         <div class="main__container">
             <div class="main__content">
