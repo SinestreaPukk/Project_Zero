@@ -4,14 +4,12 @@
 
         <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-
+    
         <link rel="stylesheet" href="styles.css" />
         <script defer src="app.js"></script>
     
 
     <title> Project Zero </title> 
-
 
 
 
@@ -39,15 +37,15 @@
                 
 
                 <li class="navbar__item">
-                    <a href="AboutU.html" class="navbar__links">About Us</a>
+                    <a href="AboutUs.php" class="navbar__links">About Us</a>
                 </li>
 
                 <li class="navbar__item">
-                    <a href="Contact.html" class="navbar__links">Resources</a>
+                    <a href="option.php" class="navbar__links">Courses</a>
                 </li>
 
                 <li class="navbar__item">
-                    <a href="https://regentsportal.engagehosted.com/vle/" class="navbar__links">Engage Portal</a>
+                    <a href="Support.php" class="navbar__links">Support Us</a>
                 </li>
                 
                 <li class="navbar__item">
@@ -64,12 +62,12 @@
     </nav>
 
     <!-- Main Section-->
-
+    <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
     <div class="main">
         <div class="main__container">
             <div class="main__content">
-                <h1 class="hiddenMain">Complete Ecosystem for learning</h1>
-                <h2 class="hiddenMain">Concise notes to significantly improve your grades</h2>
+                <h1 class="hidden">Complete Ecosystem for learning</h1>
+                <h2 class="hidden">Concise notes to significantly improve your grades</h2>
                 <button class="main_btn"><a href="option.php">Get started</a></button>
             </div> 
             
@@ -87,7 +85,7 @@
 
         <div class="main__content second_container--pall">
           <h1 class="hidden"> New generation platform for everywhere learning</h1>
-          <h2 class="hidden"> With 200+ revision notes for SAT, IGCSE </h2>
+          <h2 class="hidden"> With 200+ revision notes for SAT, IGCSE, ACT </h2>
           <div class="hidden">
             <button class="main_btn"><a href="option.php">Get started</a></button>
           </div>
@@ -170,6 +168,75 @@
               </div>
             </div>
           </a>
+
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="background-image: url('/images/image-plane.jpg')"
+            ></div>
+            <div class="article__text">
+              <div class="article__author">By Author</div>
+              <div class="article__title">
+              Title here
+              </div>
+              <div class="article__description">
+                We want you to enjoy your travels. This is why we don’t charge
+                any fees on purchases while you’re abroad. We’ll even show you …
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="background-image: url('/images/image-plane.jpg')"
+            ></div>
+            <div class="article__text">
+              <div class="article__author">By Author</div>
+              <div class="article__title">
+              Title here
+              </div>
+              <div class="article__description">
+                We want you to enjoy your travels. This is why we don’t charge
+                any fees on purchases while you’re abroad. We’ll even show you …
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="background-image: url('/images/image-plane.jpg')"
+            ></div>
+            <div class="article__text">
+              <div class="article__author">By Author</div>
+              <div class="article__title">
+              Title here
+              </div>
+              <div class="article__description">
+                We want you to enjoy your travels. This is why we don’t charge
+                any fees on purchases while you’re abroad. We’ll even show you …
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="background-image: url('/images/image-plane.jpg')"
+            ></div>
+            <div class="article__text">
+              <div class="article__author">By Author</div>
+              <div class="article__title">
+              Title here
+              </div>
+              <div class="article__description">
+                We want you to enjoy your travels. This is why we don’t charge
+                any fees on purchases while you’re abroad. We’ll even show you …
+              </div>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
@@ -229,13 +296,13 @@
         </div>
 
         <div class="footer__links col1" style="font-size: large";>
-          <a href="#">About Us</a>
+          <a href="AboutUs.php">About Us</a>
           <a href="#">Contact</a>
         </div>
 
         <div class="footer__links col2" style="font-size: large";>
-          <a href="#">Support</a>
-          <a href="#">Privacy Policy</a>
+          <a href="Support.php">Support</a>
+          <a href="privacy.php">Privacy Policy</a>
         </div>
 
         <div class="footer__copyrights" style="font-size: 10px;">
