@@ -28,7 +28,9 @@ if(isset($_POST['submit'])){
       }elseif($row['user_type'] == 'user'){
 
          $_SESSION['user_name'] = $row['name'];
-         header('location:user_page.php');
+         
+         header('location:index.php');
+         
 
       }
      
@@ -48,7 +50,9 @@ if(isset($_POST['submit'])){
    <title>login form</title>
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="r_styles.css">
+      <link rel="stylesheet" href="r_styles.css" />  
+         <link rel="stylesheet" href="styles.css" />
+        <script defer src="app.js"></script>
 
 
 
@@ -77,11 +81,11 @@ if(isset($_POST['submit'])){
                 </li>
 
                 <li class="navbar__item">
-                    <a href="Contact.html" class="navbar__links">Contact</a>
+                    <a href="option.php" class="navbar__links">Courses</a>
                 </li>
 
                 <li class="navbar__item">
-                    <a href="https://regentsportal.engagehosted.com/vle/" class="navbar__links">Engage Portal</a>
+                  <a href="Support.php" class="navbar__links">Support Us</a>
                 </li>
                 
                 <li class="navbar__item">
@@ -89,7 +93,7 @@ if(isset($_POST['submit'])){
                 </li>
                 
                 <li class="navbar__btn">
-                    <a href="register_form.php" class="button">SignUp</a>
+                    <a href="index.php" class="button">Home</a>
                 </li>
 
          
@@ -122,6 +126,12 @@ if(isset($_POST['submit'])){
 </div>
 
 </div>
+
+
+
+
+
+
 
 </body>
 </html>
